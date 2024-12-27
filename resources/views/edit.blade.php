@@ -24,11 +24,7 @@
         <br><br>
         <form action="{{ route('update.update') }}" method="POST" enctype="multipart/form-data">
         @csrf
-        <center>@if(Auth::user()->profilePicture)
-        <img src="{{ asset('storage/' . Auth::user()->profilePicture) }}" class="rounded-circle w-50">
-        @else
-        <img src="{{ asset('Element/profile Icon.png') }}" class="rounded-circle w-50">
-        @endif</center>
+        <img src="{{ asset('Element/profile Icon.png') }}" class="rounded-circle w-50"></center>
         <br><br>
         <center><div class="customButton"><input type="file" name="profilePicture" id="profilePicture" class="form-control"></div></center>
         <br>
